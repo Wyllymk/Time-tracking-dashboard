@@ -1,224 +1,306 @@
-/* ! VARIABLES */
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Rubik", sans-serif;
+@font-face {
+    font-family: 'Rubik';
+    src: url('Rubik-VariableFont_wght.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 
-html {
-  font-size: 62.5%;
+:root{
+    --Blue: hsl(83, 80%, 60%);
+    --Light-orange : hsl(15, 100%, 70%);
+    --Soft-blue: hsl(195, 74%, 62%);
+    --Light-red: hsl(348, 100%, 68%);
+    --Lime-green: hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --Soft-orange: hsl(43, 84%, 65%);
+  /* ### Neutral */
+
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+body{
+    font-size: 18px; 
+    color: #fff;
+}  
+main{
+    min-height: 100vh;
+    width: 100%;
+    background: var(--Very-dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+p{
+    opacity: 0.6;
+    font-size: 0.7em;
+}
+.container{
+    width: 80%;
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* border: 1px solid #fff;   */
+}
+.user{
+   position: relative;
+   height: 480px;
+   width: 20%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: flex-start;
+   background: var(--Dark-blue);
+   border-radius: 10px;
+}
+.user_profile{
+    padding: 30px 25px 0px 25px;    
+    height: 65%;
+    width: 100%;
+    background: var(--Desaturated-blue);  
+    border-radius: 10px;
+}
+.user_image{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background: url('images/image-jeremy.png');
+    background-size: cover;
+}
+.user_info{
+    padding: 30px 0px;
+}
+.user_info p{
+    font-weight: 300;
+}
+.user_info h1{
+    font-weight: 500;
+    font-size: 35px;
+    padding-top: 5px;
+}
+.user_schedule{
+    height: 35%;
+    padding: 35px 35px 35px 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column; 
+    
+}
+.user_schedule p{
+    font-size: 0.8em;
+}
+.user_schedule p:hover, .user_schedule a:active{
+    opacity: 1;
 }
 
-body {
-  background-color: hsl(226deg, 43%, 10%);
+.tasks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+   /* border: 1px solid green; */
+}
+.card{
+    position: relative;
+    width: 250px;
+    height: 230px;
+    margin: 10px;
+    background-color: var(--Light-orange);
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.card:hover .card_content{
+    background-color: var(--Desaturated-blue);
+}
+.card:nth-child(1) .icon,.card:nth-child(2) .icon,.card:nth-child(3) .icon{
+  transform: translate(160px, -10px);
+}
+.card:nth-child(4) .icon,.card:nth-child(5) .icon{
+    transform: translate(175px, 4px);
+    width: 25%;
+}
+.card:nth-child(6) .icon{
+    transform: translate(160px, -15px);
+}
+ .card_content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 190px;
+    width: 100%;
+    background: var(--Dark-blue);
+    border-radius: 10px;
+    z-index: 1; 
+    padding: 25px;
+    transition: 1s;  
+}
+.card_top_row{
+    display: flex;
+    justify-content: space-between;
+}
+.card_top_row p{
+    font-weight: 500;
+    font-size: 0.8em;
+    opacity: 1;
+    text-transform: capitalize;
+}
+.card .ellipsis{
+    object-fit: contain;
+    opacity: 0.7;
+}
+.card .ellipsis:hover{
+    opacity: 1;
+}
+.card_bottom_row{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    padding-top: 30px;
+}
+.card_bottom_row p{
+    font-weight: 300;
+    padding-top: 15px;
 }
 
-.container {
-  display: grid;
-  height: auto;
-  width: 88%;
-  margin: 2rem auto;
-  justify-items: center;
-  align-items: center;
-  gap: 2.2rem;
-  
+.card h1{
+    font-size: 45px;
+    font-weight: 400;
 }
-
-.content{
-  padding: 50px 100px 0px 100px;
-  height: 70%;
-  width: 80%;
-  border: 2px solid white;
+.card:nth-child(1){
+    margin-left: 0;
 }
-.grid-container{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-areas:
-  ".one two three four"
-  ".one five six seven"
-  ;
-  gap: 30px;
+.card:nth-child(2){
+    background-color: var(--Soft-blue);
 }
-
-.one {
-  grid-area: .one;
-  background-color: hsl(235deg, 46%, 20%);
-  border-radius: 1.6rem;
-  width: 100%;
+.card:nth-child(3){
+    background-color: var(--Light-red);
 }
- .one .card-report {
-  background-color: hsl(246deg, 80%, 60%);
-  border-radius: 1.6rem;
-  padding: 3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1.8rem;
+.card:nth-child(4){
+    background-color: var(--Lime-green);
 }
-.one .card-report img {
-  width: 26%;
-  max-width: 130px;
-  border: 3px solid white;
-  border-radius: 50%;
+.card:nth-child(5){
+    background-color: var(--Violet);
 }
-.one .card-report .report {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 0.4rem;
-}
-.one .card-report p {
-  color: hsl(236deg, 100%, 87%);
-  font-size: 1.5rem;
-}
-.one .card-report .name {
-  color: white;
-  font-size: 2.4rem;
-  font-weight: 300;
-}
-.one .menu {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 2.5rem;
-}
-.one .menu .menu-link {
-  color: hsl(235deg, 45%, 61%);
-  font-size: 1.8rem;
-  cursor: pointer;
-}
-.one .menu .menu-link:hover {
-  color: white;
-}
-.one .menu .menu-active {
-  color: white;
-} */
-
-
-..one{
-  grid-area: .one;
-}
-..one .desktop-image{
-  width: 100%;
-}
-..one .mobile-image{
-  display: n.one;
-}
-
-.two{
-  display: flex;
-  flex-flow: column nowrap;
-  grid-area: two;
-
+.card:nth-child(6){
+    background-color: var(--Soft-orange);
 }
 
 
-.three{
-  grid-area: three;
+@media screen and (max-width: 1200px) {
+    .container{
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .user{
+        width: 90%;
+        max-width: 300px;
+        height: 200px;
+        align-items: center;
+        padding: 0;
+    }
+    .user_profile{
+        height: 130px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .user_info{
+        padding: 0;
+        width: 65%;
+    }
+    .user_info h1{
+        font-size: 24px;
+    }
+    .user_schedule{
+        padding: 0;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .tasks{
+        width: 100%;
+    }
+    .card{
+        width: 300px;
+        height: 160px;
+    }
+    .card_content{
+        height: 120px;
+    }
+    .card_bottom_row{
+        flex-direction: row;
+        padding-top: 15px;
+    }
+    .card:nth-child(1) .icon,.card:nth-child(2) .icon,.card:nth-child(3) .icon{
+        transform: translate(200px, -10px);
+      }
+      .card:nth-child(4) .icon{
+          transform: translate(200px, 0px);
+      }
+      .card:nth-child(5) .icon{
+          transform: translate(220px, -15px);
+      }
+      .card:nth-child(6) .icon{
+          transform: translate(210px, -8px);
+      }
 }
 
-.four{
-  grid-area: four;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-}
-.five{
-  grid-area: five;
-}
 
-.six{
-  grid-area: six;
+@media screen and (min-width: 1024px) and (max-width: 1200px){
+    .container{
+        height: 520px;
+        width: 90%;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .user{
+        width: 25%;
+        height: 100%;
+        align-items: flex-start;
+    }
+    .user_profile{
+        display: block;
+        padding: 30px 25px 0px 25px;  
+        height: 65%;
+        width: 100%; 
+    } 
+    .user_info{
+        padding: 30px 0px;
+    }
+    .user_info h1{
+        font-weight: 500;
+        font-size: 35px;
+        padding-top: 5px;
+    }
+    .user_schedule{
+        padding: 0;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;   
+        height: 35%;
+        padding: 35px 35px 35px 30px;
+    }
+    .tasks{
+        width: 75%;
+    }
 }
-
-.seven{
-  grid-area: seven;
-}
-
-
-.weekly {
-  width: 100%;
-  border-radius: 1.6rem;
-  background-repeat: no-repeat;
-  background-position: 92% -1rem;
-}
-.weekly .property-card {
-  position: relative;
-  background-color: hsl(235deg, 46%, 20%);
-  margin-top: 4rem;
-  border-radius: 1.6rem;
-  padding: 2.8rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.8rem;
-}
-.weekly .property-card:hover {
-  background-color: hsl(236deg, 41%, 34%);
-}
-.weekly .property-card .row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-.weekly .property-card .row .title {
-  color: white;
-  font-size: 1.8rem;
-  font-weight: 500;
-  z-index: 98;
-}
-.weekly .property-card .row .points {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.weekly .property-card .row .points:hover .point {
-  background-color: white;
-}
-.weekly .property-card .row .points:before {
-  content: "";
-  background-color: pink;
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 1.6rem;
-  display: n.one;
-}
-.weekly .property-card .row .points:hover::before {
-  background-color: hsl(235deg, 46%, 20%);
-  display: block;
-}
-.weekly .property-card .row .points .point {
-  background-color: hsl(236deg, 100%, 87%);
-  width: 0.4rem;
-  height: 0.4rem;
-  border-radius: 50%;
-  margin: 0.2rem;
-  z-index: 99;
-}
-.weekly .property-card .row-2 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  z-index: 97;
-}
-.weekly .property-card .hours {
-  color: white;
-  font-size: 3rem;
-  font-weight: 300;
-}
-.weekly .property-card .description {
-  color: hsl(236deg, 100%, 87%);
-  font-size: 1.5rem;
-}
-

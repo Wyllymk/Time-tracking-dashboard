@@ -1,182 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
-
-  <!-- FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
-
-  <title>Frontend Mentor | Time Tracking Dashboard</title>
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
 
 </head>
 <body>
+  <main>
     <div class="container">
-        <div class="content">
+      <div class="user">
+          <div class="user_profile">
+              <div class="user_image"></div>
+              <div class="user_info">
+                <p>Report for</p>
+                <h1>Jeremy <br> Robson   </h1>
             
-            <div class="grid-container">
-                <div class="one">
-                    <div class="card-report">
-                        <img src="assets/images/image-jeremy.png" alt="image jeremy">
-                        <div class="report">
-                          <p>Report for</p>
-                          <div class="name">Jeremy Robson</div>
-                        </div>
-                      </div>
-                      <div class="menu">
-                        <div class="menu-link">Daily</div>
-                        <div class="menu-link menu-active">Weekly</div>
-                        <div class="menu-link">Monthly</div>
-                      </div>
+              </div>
+          </div>
+
+          <div class="user_schedule">
+            <a href="#" id="daily"><p>Daily</p></a>
+            <a href="#" id="weekly"><p>Weekly</p></a>
+            <a href="#" id="monthly" ><p>Monthly</p></a>
+          </div>
+      </div>
+
+      <div class="tasks">
+          <div class="card">
+            <img class="icon" src="assets/images/image-jeremy.png" alt="work-icon">
+            <div class="card_content">
+                <div class="card_top_row">
+                  <p >Work</p>
+                  <img class="ellipsis" src="assets/images/icon-ellipsis.svg" alt="icon-ellipsis">
                 </div>
-                <div class="two">
-                    <!-- <div class="daily">
-                        <div>
-                            <h5>Work</h5>
-                            <h1>5hrs</h1>
-                            <p>Previous - 7hrs</p>
-                        </div>
-                    </div> -->
-                    <div class="weekly">
-                        <div class="property-card">
-                            <h5>Work</h5>
-                            <h1>32hrs</h1>
-                            <p>Previous - 36hrs</p>
-                        </div>
-                    </div>
-                    <!-- <div class="monthly">
-                        <div>
-                            <h5>Work</h5>
-                            <h1>103hrs</h1>
-                            <p>Previous - 128hrs</p>
-                        </div>
-                    </div> -->
-                </div>
-                <div class="three">
-                            <!-- <div class="daily">
-                        <div>
-                            <h5>Work</h5>
-                            <h1>5hrs</h1>
-                            <p>Previous - 7hrs</p>
-                        </div>
-                    </div> -->
-                    <div class="weekly">
-                        <div class="property-card">
-                            <h5>Play</h5>
-                            <h1>10hrs</h1>
-                            <p>Previous - 8hrs</p>
-                        </div>
-                    </div>
-                    <!-- <div class="monthly">
-                        <div>
-                            <h5>Work</h5>
-                            <h1>103hrs</h1>
-                            <p>Previous - 128hrs</p>
-                        </div>
-                    </div> -->
-                </div>
-                <div class="four">
-                            <!-- <div class="daily">
-                        <div>
-                            <h5>Work</h5>
-                            <h1>5hrs</h1>
-                            <p>Previous - 7hrs</p>
-                        </div>
-                    </div> -->
-                    <div class="weekly">
-                        <div class="property-card">
-                            <h5>Study</h5>
-                            <h1>4hrs</h1>
-                            <p>Previous - 7hrs</p>
-                        </div>
-                    </div>
-                    <!-- <div class="monthly">
-                        <div>
-                            <h5>Work</h5>
-                            <h1>103hrs</h1>
-                            <p>Previous - 128hrs</p>
-                        </div>
-                    </div> -->
-                </div>
-                <div class="five">
-                            <!-- <div class="daily">
-                        <div>
-                            <h5>Work</h5>
-                            <h1>5hrs</h1>
-                            <p>Previous - 7hrs</p>
-                        </div>
-                    </div> -->
-                    <div class="weekly">
-                        <div class="property-card">
-                            <h5>Exercise</h5>
-                            <h1>4hrs</h1>
-                            <p>Previous - 5hrs</p>
-                        </div>
-                    </div>
-                    <!-- <div class="monthly">
-                        <div>
-                            <h5>Work</h5>
-                            <h1>103hrs</h1>
-                            <p>Previous - 128hrs</p>
-                        </div>
-                    </div> -->
-                </div>
-                <div class="six">
-                            <!-- <div class="daily">
-                        <div>
-                            <h5>Work</h5>
-                            <h1>5hrs</h1>
-                            <p>Previous - 7hrs</p>
-                        </div>
-                    </div> -->
-                    <div class="weekly">
-                        <div class="property-card">
-                            <h5>Social</h5>
-                            <h1>5hrs</h1>
-                            <p>Previous - 10hrs</p>
-                        </div>
-                    </div>
-                    <!-- <div class="monthly">
-                        <div>
-                            <h5>Work</h5>
-                            <h1>103hrs</h1>
-                            <p>Previous - 128hrs</p>
-                        </div>
-                    </div> -->
-                </div>
-                <div class="seven">
-                            <!-- <div class="daily">
-                        <div>
-                            <h5>Work</h5>
-                            <h1>5hrs</h1>
-                            <p>Previous - 7hrs</p>
-                        </div>
-                    </div> -->
-                    <div class="weekly">
-                        <div class="property-card">
-                            <h5>Self Care</h5>
-                            <h1>2hrs</h1>
-                            <p>Previous - 2hrs</p>
-                        </div>
-                    </div>
-                    <!-- <div class="monthly">
-                        <div>
-                            <h5>Work</h5>
-                            <h1>103hrs</h1>
-                            <p>Previous - 128hrs</p>
-                        </div>
-                    </div> -->
+                
+                <div class="card_bottom_row">
+                  <h1 class ="current">  32hrs</h1>
+                  <p class ="previous">Last week - 36hrs</p>
                 </div>
             </div>
-        </div>
+          </div>
+
+          
+          <div class="card">
+            <img class="icon" src="assets/images/icon-play.svg" alt="play-icon">
+            <div class="card_content">
+                <div class="card_top_row">
+                  <p>play</p>
+                  <img class="ellipsis" src="assets/images/icon-ellipsis.svg" alt="icon-ellipsis">
+                </div>
+                
+                <div class="card_bottom_row">
+                  <h1 class ="current">  32hrs</h1>
+                  <p class ="previous">Last week - 36hrs</p>
+                </div>
+            </div>
+          </div>
+
+
+          <div class="card">
+            <img class="icon" src="asstes/images/icon-study.svg" alt="study-icon">
+            <div class="card_content">
+                <div class="card_top_row">
+                  <p>study</p>
+                  <img class="ellipsis" src="asstes/images/icon-ellipsis.svg" alt="icon-ellipsis">
+                </div>
+                
+                <div class="card_bottom_row">
+                  <h1>  32hrs</h1>
+                  <p>Last week - 36hrs</p>
+                </div>
+            </div>
+          </div>
+
+
+         <div class="card">
+            <img class="icon" src="asstes/images/icon-exercise.svg" alt="exercise-icon">
+            <div class="card_content">
+                <div class="card_top_row">
+                  <p>Exercise </p>
+                  <img class="ellipsis" src="asstes/images/icon-ellipsis.svg" alt="icon-ellipsis">
+                </div>
+                
+                <div class="card_bottom_row">
+                  <h1>  32hrs</h1>
+                  <p>Last week - 36hrs</p>
+                </div>
+            </div>
+          </div>
+
+          
+          <div class="card">
+            <img class="icon" src="asstes/images/icon-social.svg" alt="social-icon">
+            <div class="card_content">
+                <div class="card_top_row">
+                  <p>Social</p>
+                  <img class="ellipsis" src="asstes/images/icon-ellipsis.svg" alt="icon-ellipsis">
+                </div>
+                
+                <div class="card_bottom_row">
+                  <h1>  32hrs</h1>
+                  <p>Last week - 36hrs</p>
+                </div>
+            </div>
+          </div>
+
+          
+          <div class="card">
+            <img class="icon" src="asstes/images/icon-self-care.svg" alt="selfcare-icon">
+            <div class="card_content">
+                <div class="card_top_row">
+                  <p>self-care</p>  
+                  <img class="ellipsis" src="asstes/images/icon-ellipsis.svg" alt="icon-ellipsis">
+                </div>
+                
+                <div class="card_bottom_row">
+                  <h1>  32hrs</h1>
+                  <p>Last week - 36hrs</p>
+                </div>
+            </div>
+          </div>
+
+      </div>
     </div>
-    <script src="script.js"></script>
+  </main>
+
+
 </body>
 </html>
