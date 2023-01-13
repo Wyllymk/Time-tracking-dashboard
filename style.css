@@ -1,0 +1,224 @@
+/* ! VARIABLES */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: hsl(226deg, 43%, 10%);
+}
+
+.container {
+  display: grid;
+  height: auto;
+  width: 88%;
+  margin: 2rem auto;
+  justify-items: center;
+  align-items: center;
+  gap: 2.2rem;
+  
+}
+
+.content{
+  padding: 50px 100px 0px 100px;
+  height: 70%;
+  width: 80%;
+  border: 2px solid white;
+}
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+  ".one two three four"
+  ".one five six seven"
+  ;
+  gap: 30px;
+}
+
+.one {
+  grid-area: .one;
+  background-color: hsl(235deg, 46%, 20%);
+  border-radius: 1.6rem;
+  width: 100%;
+}
+ .one .card-report {
+  background-color: hsl(246deg, 80%, 60%);
+  border-radius: 1.6rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.8rem;
+}
+.one .card-report img {
+  width: 26%;
+  max-width: 130px;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+.one .card-report .report {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.4rem;
+}
+.one .card-report p {
+  color: hsl(236deg, 100%, 87%);
+  font-size: 1.5rem;
+}
+.one .card-report .name {
+  color: white;
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+.one .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 2.5rem;
+}
+.one .menu .menu-link {
+  color: hsl(235deg, 45%, 61%);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.one .menu .menu-link:hover {
+  color: white;
+}
+.one .menu .menu-active {
+  color: white;
+} */
+
+
+..one{
+  grid-area: .one;
+}
+..one .desktop-image{
+  width: 100%;
+}
+..one .mobile-image{
+  display: n.one;
+}
+
+.two{
+  display: flex;
+  flex-flow: column nowrap;
+  grid-area: two;
+
+}
+
+
+.three{
+  grid-area: three;
+}
+
+.four{
+  grid-area: four;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+.five{
+  grid-area: five;
+}
+
+.six{
+  grid-area: six;
+}
+
+.seven{
+  grid-area: seven;
+}
+
+
+.weekly {
+  width: 100%;
+  border-radius: 1.6rem;
+  background-repeat: no-repeat;
+  background-position: 92% -1rem;
+}
+.weekly .property-card {
+  position: relative;
+  background-color: hsl(235deg, 46%, 20%);
+  margin-top: 4rem;
+  border-radius: 1.6rem;
+  padding: 2.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+.weekly .property-card:hover {
+  background-color: hsl(236deg, 41%, 34%);
+}
+.weekly .property-card .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.weekly .property-card .row .title {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 500;
+  z-index: 98;
+}
+.weekly .property-card .row .points {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.weekly .property-card .row .points:hover .point {
+  background-color: white;
+}
+.weekly .property-card .row .points:before {
+  content: "";
+  background-color: pink;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 1.6rem;
+  display: n.one;
+}
+.weekly .property-card .row .points:hover::before {
+  background-color: hsl(235deg, 46%, 20%);
+  display: block;
+}
+.weekly .property-card .row .points .point {
+  background-color: hsl(236deg, 100%, 87%);
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  margin: 0.2rem;
+  z-index: 99;
+}
+.weekly .property-card .row-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 97;
+}
+.weekly .property-card .hours {
+  color: white;
+  font-size: 3rem;
+  font-weight: 300;
+}
+.weekly .property-card .description {
+  color: hsl(236deg, 100%, 87%);
+  font-size: 1.5rem;
+}
+
